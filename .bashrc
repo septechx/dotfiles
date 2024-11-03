@@ -9,10 +9,15 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 PS1='[\u@\h \W]\$ '
 
+# Custom below
+export EDITOR=nvim
+
 alias vim="nvim"
 alias cd="z"
 alias rm="trash"
 alias c="clear"
+
+figlet "Nah siesque rili" | lolcat
 
 eval "$(starship init bash)"
 eval "$(zoxide init bash)"
