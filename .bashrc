@@ -13,11 +13,10 @@ PS1='[\u@\h \W]\$ '
 export EDITOR=nvim
 
 alias vim="nvim"
-alias cd="z"
 alias rm="trash"
 alias c="clear"
 
 figlet "Nah siesque rili" | lolcat
 
 eval "$(starship init bash)"
-eval "$(zoxide init bash)"
+eval "$(zoxide init --cmd cd bash)"
