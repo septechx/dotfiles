@@ -6,7 +6,7 @@
   "height": 32,
   "modules-left": ["hyprland/window"],
   "modules-center": ["hyprland/workspaces"],
-  "modules-right": ["pulseaudio", "bluetooth", "network", "clock"],
+  "modules-right": ["wireplumber", "bluetooth", "network", "clock"],
   "hyprland/window": {
     "format": "{}",
     "max-length": 35,
@@ -41,8 +41,8 @@
   "bluetooth": {
     "on-click": "blueman-manager",
   },
-  "pulseaudio": {
-    "format": "{icon}  {volume}%",
+  "wireplumber": {
+    "format": "{icon} {volume}%",
     "format-bluetooth": "{volume}% {icon}  {format_source}",
     "format-bluetooth-muted": " {icon}  {format_source}",
     "format-muted": "",

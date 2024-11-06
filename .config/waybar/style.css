@@ -9,7 +9,7 @@ window#waybar {
   background-color: rgba(0, 0, 0, 0);
   border-radius: 13px;
   transition-property: background-color;
-  transition-duration: .5s;
+  transition-duration: 0.5s;
 }
 
 button {
@@ -27,7 +27,9 @@ button:hover {
 }
 
 /* you can set a style on hover for any module like this */
-#pulseaudio:hover {
+#pulseaudio:hover,
+#wireplumber:hover,
+#bluetooth:hover {
   background-color: @surface2;
 }
 
@@ -36,7 +38,6 @@ button:hover {
   background-color: transparent;
   color: #ffffff;
 }
-
 
 #workspaces button:hover {
   background: rgba(0, 0, 0, 0.2);
@@ -52,7 +53,7 @@ button:hover {
 }
 
 #mode {
-  background-color: #64727D;
+  background-color: #64727d;
   box-shadow: inset 0 -3px #ffffff;
 }
 
@@ -62,11 +63,12 @@ button:hover {
 #memory,
 #bluetooth,
 #network,
-#pulseaudio {
+#pulseaudio,
+#wireplumber {
   padding: 0 10px;
 }
 
-#pulseaudio {
+#wireplumber {
   color: @maroon;
 }
 

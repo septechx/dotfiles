@@ -16,7 +16,6 @@ zinit light Aloxaf/fzf-tab
 
 # Snippets
 zinit snippet OMZP::sudo
-zinit snippet OMZP::archlinux
 zinit snippet OMZP::command-not-found
 
 # Load completions
@@ -49,6 +48,9 @@ zstyle ":completion:*" menu no
 zstyle ":fzf-tab:complete:cd:*" fzf-preview "ls --color $realpath"
 zstyle ":fzf-tab:complete:__zoxide_z:*" fzf-preview "ls --color $realpath"
 
+# Env vars
+export EDITOR="nvim"
+
 # Aliases
 alias ls="ls --color"
 alias grep="grep --color"
@@ -57,6 +59,7 @@ alias htop="btop"
 alias vim="nvim"
 alias rm="trash"
 alias c="clear"
+alias lg="lazygit"
 
 # Init message
 figlet "Nah siesque rili" | lolcat
