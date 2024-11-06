@@ -47,7 +47,7 @@
     "on-click": "blueman-manager",
   },
   "wireplumber": {
-    "format": "{icon} {volume}%",
+    "format": "{volume}% {icon}",
     "format-bluetooth": "{volume}% {icon}  {format_source}",
     "format-bluetooth-muted": " {icon}  {format_source}",
     "format-muted": "",
