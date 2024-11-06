@@ -39,6 +39,11 @@
     "format-alt": "{ifname}: {ipaddr}/{cidr}",
   },
   "bluetooth": {
+    "format-connected": "CO ",
+    "format-connected-battery": "{device_battery_percentage} ",
+    "format-on": "ON ",
+    "format-off": "OF ",
+
     "on-click": "blueman-manager",
   },
   "wireplumber": {
