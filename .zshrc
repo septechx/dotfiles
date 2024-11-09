@@ -51,30 +51,22 @@ zstyle ":fzf-tab:complete:__zoxide_z:*" fzf-preview "ls --color $realpath"
 # Env vars
 export EDITOR="nvim"
 
-#
-# Aliases
-#
 
-# Default flags
+# Aliases
 alias ls="ls --color"
 alias grep="grep --color"
-# Renames
 alias cat="bat"
 alias htop="btop"
 alias vim="nvim"
-# rm -rf / protection 
 alias rm="trash"
-# Shorter
 alias c="clear"
 alias lg="lazygit"
-# Tmux
 alias tml="tmux ls"
 alias tma="tmux attach"
 alias tmk="tmux kill-server"
 alias tm="~/dotfiles/scripts/tmux.sh"
 
-# Init message
-figlet "Nah siesque rili" | lolcat
+#figlet "Nah siesque rili" | lolcat
 
 # Other plugins
 eval "$(fzf --zsh)"
