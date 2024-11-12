@@ -2,8 +2,8 @@
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
 if [ ! -d "$ZINIT_HOME" ]; then
-	mkdir -p "$(dirname $ZINIT_HOME)"
-	git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+    mkdir -p "$(dirname $ZINIT_HOME)"
+    git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
 
 source "${ZINIT_HOME}/zinit.zsh"
@@ -51,7 +51,6 @@ zstyle ":fzf-tab:complete:__zoxide_z:*" fzf-preview "ls --color $realpath"
 # Env vars
 export EDITOR="nvim"
 
-
 # Aliases
 alias ls="ls --color"
 alias grep="grep --color"
@@ -76,7 +75,7 @@ eval "$(zoxide init --cmd cd zsh)"
 # pnpm
 export PNPM_HOME="/home/sep/.local/share/pnpm"
 case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
+    *":$PNPM_HOME:"*) ;;
+    *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
