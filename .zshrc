@@ -49,7 +49,7 @@ zstyle ":fzf-tab:complete:cd:*" fzf-preview "ls --color $realpath"
 zstyle ":fzf-tab:complete:__zoxide_z:*" fzf-preview "ls --color $realpath"
 
 # Env vars
-export PATH="$PATH:$HOME/repos/zigdown/zig-out/bin/:${XDG_DATA_HOME:-${HOME}/.local/share}/zigdown:$HOME/bin/platform-tools/"
+export PATH="$PATH:$HOME/repos/zigdown/zig-out/bin/:${XDG_DATA_HOME:-${HOME}/.local/share}/zigdown:$HOME/bin/platform-tools/:$HOME/.cargo/bin/"
 
 export EDITOR="nvim"
 export MANPAGER="nvim +Man!"
