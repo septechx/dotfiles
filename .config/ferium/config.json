@@ -18,6 +18,12 @@
       ],
       "mods": [
         {
+          "name": "Alternate Current",
+          "identifier": {
+            "ModrinthProject": "r0v8vy1s"
+          }
+        },
+        {
           "name": "AppleSkin",
           "identifier": {
             "ModrinthProject": "EsAfCjCV"
@@ -27,6 +33,12 @@
           "name": "Balm",
           "identifier": {
             "ModrinthProject": "MBAkmtvl"
+          }
+        },
+        {
+          "name": "Better Than Mending",
+          "identifier": {
+            "ModrinthProject": "Lvv4SHrK"
           }
         },
         {
@@ -54,6 +66,12 @@
           }
         },
         {
+          "name": "Get It Together, Drops!",
+          "identifier": {
+            "CurseForgeProject": 411045
+          }
+        },
+        {
           "name": "Geyser",
           "identifier": {
             "ModrinthProject": "wKkoqHrH"
@@ -72,6 +90,12 @@
           }
         },
         {
+          "name": "MixinTrace",
+          "identifier": {
+            "ModrinthProject": "sGmHWmeL"
+          }
+        },
+        {
           "name": "NetherPortalFix",
           "identifier": {
             "ModrinthProject": "nPZr02ET"
@@ -84,15 +108,39 @@
           }
         },
         {
+          "name": "Roughly Enough Items (REI)",
+          "identifier": {
+            "ModrinthProject": "nfn13YXA"
+          }
+        },
+        {
           "name": "ScalableLux",
           "identifier": {
             "ModrinthProject": "Ps1zyz6x"
           }
         },
         {
+          "name": "ViaBackwards",
+          "identifier": {
+            "ModrinthProject": "NpvuJQoq"
+          }
+        },
+        {
           "name": "ViaFabric",
           "identifier": {
             "ModrinthProject": "YlKdE5VK"
+          }
+        },
+        {
+          "name": "ViaVersion",
+          "identifier": {
+            "ModrinthProject": "P1OZGk5p"
+          }
+        },
+        {
+          "name": "Xaero's World Map",
+          "identifier": {
+            "ModrinthProject": "NcUtCpym"
           }
         }
       ]
