@@ -1,4 +1,3 @@
-# Zinit setup
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
 if [ ! -d "$ZINIT_HOME" ]; then
@@ -8,27 +7,22 @@ fi
 
 source "${ZINIT_HOME}/zinit.zsh"
 
-# PLugins
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
 
-# Snippets
 zinit snippet OMZP::sudo
 zinit snippet OMZP::command-not-found
 
-# Load completions
 autoload -U compinit && compinit
 
 zinit cdreplay -q
 
-# Keybinds
 bindkey "^y" autosuggest-accept
 bindkey "^p" history-search-backward
 bindkey "^n" history-search-forward
 
-# History
 HISTSIZE=5000
 HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
@@ -41,20 +35,17 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
-# Completion syling
 zstyle ":completion:*" matcher-list "m:{a-z}={A-Za-z}"
 zstyle ":completion:*" list-colors "${(s.:.)LS_COLORS}"
 zstyle ":completion:*" menu no
 zstyle ":fzf-tab:complete:cd:*" fzf-preview "ls --color $realpath"
 zstyle ":fzf-tab:complete:__zoxide_z:*" fzf-preview "ls --color $realpath"
 
-# Env vars
 export PATH="$PATH:$HOME/repos/zigdown/zig-out/bin/:${XDG_DATA_HOME:-${HOME}/.local/share}/zigdown:$HOME/bin/platform-tools/:$HOME/.cargo/bin/:$HOME/.millennium/ext/bin"
 
 export EDITOR="nvim"
 export MANPAGER="nvim +Man!"
 
-# Aliases
 alias ls="ls --color"
 alias grep="grep --color"
 alias cat="bat"
@@ -68,17 +59,14 @@ alias tma="tmux attach"
 alias tmk="tmux kill-server"
 alias tm="~/dotfiles/scripts/tmux.sh"
 
-#figlet "Nah siesque rili" | lolcat
+source /usr/share/nvm/init-nvm.sh
 
-# Other plugins
-eval "$(fzf --zsh)"
-eval "$(starship init zsh)"
-eval "$(zoxide init --cmd cd zsh)"
-
-# pnpm
-export PNPM_HOME="/home/sep/.local/share/pnpm"
+export PNPM_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/pnpm"
 case ":$PATH:" in
     *":$PNPM_HOME:"*) ;;
     *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
-# pnpm end
+
+eval "$(fzf --zsh)"
+eval "$(starship init zsh)"
+eval "$(zoxide init --cmd cd zsh)"
