@@ -18,12 +18,6 @@
       ],
       "mods": [
         {
-          "name": "Alternate Current",
-          "identifier": {
-            "ModrinthProject": "r0v8vy1s"
-          }
-        },
-        {
           "name": "AppleSkin",
           "identifier": {
             "ModrinthProject": "EsAfCjCV"
@@ -36,10 +30,50 @@
           }
         },
         {
+          "name": "Carpet TIS Addition",
+          "identifier": {
+            "ModrinthProject": "jE0SjGuf"
+          }
+        },
+        {
+          "name": "ChunkDebug",
+          "identifier": {
+            "ModrinthProject": "zQxjhDPq"
+          }
+        },
+        {
           "name": "Concurrent Chunk Management Engine (Fabric)",
           "identifier": {
             "ModrinthProject": "VSNURh3q"
           }
+        },
+        {
+          "name": "DWRCL",
+          "identifier": {
+            "GitHubRepository": [
+              "Separatehhh23",
+              "DWRCL"
+            ]
+          },
+          "filters": [
+            {
+              "Filename": ".*-fabric.jar$"
+            }
+          ]
+        },
+        {
+          "name": "DWRT",
+          "identifier": {
+            "GitHubRepository": [
+              "Separatehhh23",
+              "DWRT"
+            ]
+          },
+          "filters": [
+            {
+              "Filename": ".*-fabric.jar$"
+            }
+          ]
         },
         {
           "name": "Fabric API",
@@ -78,9 +112,21 @@
           }
         },
         {
+          "name": "LuckPerms",
+          "identifier": {
+            "ModrinthProject": "Vebnzrzj"
+          }
+        },
+        {
           "name": "MixinTrace",
           "identifier": {
             "ModrinthProject": "sGmHWmeL"
+          }
+        },
+        {
+          "name": "ModernFix",
+          "identifier": {
+            "ModrinthProject": "nmDcB62a"
           }
         },
         {
@@ -120,6 +166,15 @@
           }
         },
         {
+          "name": "spawnimmunity",
+          "identifier": {
+            "GitHubRepository": [
+              "Separatehhh23",
+              "spawnimmunity"
+            ]
+          }
+        },
+        {
           "name": "ViaBackwards",
           "identifier": {
             "ModrinthProject": "NpvuJQoq"
@@ -135,6 +190,12 @@
           "name": "ViaVersion",
           "identifier": {
             "ModrinthProject": "P1OZGk5p"
+          }
+        },
+        {
+          "name": "X Backup",
+          "identifier": {
+            "ModrinthProject": "zJ4gyF5J"
           }
         },
         {

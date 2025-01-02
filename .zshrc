@@ -59,6 +59,9 @@ alias tma="tmux attach"
 alias tmk="tmux kill-server"
 alias tm="~/dotfiles/scripts/tmux.sh"
 
+read -r ferium_github_key < "$HOME/dotfiles/secrets.txt"
+alias ferium="ferium --github-token $ferium_github_key"
+
 source /usr/share/nvm/init-nvm.sh
 
 export PNPM_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/pnpm"
