@@ -41,7 +41,7 @@ zstyle ":completion:*" menu no
 zstyle ":fzf-tab:complete:cd:*" fzf-preview "ls --color $realpath"
 zstyle ":fzf-tab:complete:__zoxide_z:*" fzf-preview "ls --color $realpath"
 
-export PATH="$PATH:$HOME/repos/zigdown/zig-out/bin/:${XDG_DATA_HOME:-${HOME}/.local/share}/zigdown:$HOME/bin/platform-tools/:$HOME/.cargo/bin/:$HOME/.millennium/ext/bin:${HOME}/.local/bin"
+export PATH="$PATH:$HOME/bin/platform-tools/:$HOME/.cargo/bin/:$HOME/.millennium/ext/bin:${HOME}/.local/bin"
 
 export EDITOR="nvim"
 export MANPAGER="nvim +Man!"
@@ -70,6 +70,11 @@ case ":$PATH:" in
     *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 
+export ZVM_INSTALL="$HOME/.zvm/self"
+export PATH="$PATH:$HOME/.zvm/bin"
+export PATH="$PATH:$ZVM_INSTALL/"
+
 eval "$(fzf --zsh)"
 eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+
