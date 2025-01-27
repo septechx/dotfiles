@@ -12,6 +12,7 @@ zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
 
+zinit snippet OMZP::asdf
 zinit snippet OMZP::sudo
 zinit snippet OMZP::command-not-found
 
@@ -54,10 +55,8 @@ alias vim="nvim"
 alias rm="trash"
 alias c="clear"
 alias lg="lazygit"
-alias tml="tmux ls"
-alias tma="tmux attach"
-alias tmk="tmux kill-server"
-alias tm="~/dotfiles/scripts/tmux.sh"
+alias tls="tmux ls"
+alias ta="tmux attach"
 
 read -r ferium_github_key < "$HOME/dotfiles/secrets.txt"
 alias ferium="ferium --github-token $ferium_github_key"
@@ -73,6 +72,8 @@ esac
 export ZVM_INSTALL="$HOME/.zvm/self"
 export PATH="$PATH:$HOME/.zvm/bin"
 export PATH="$PATH:$ZVM_INSTALL/"
+
+fastfetch
 
 eval "$(fzf --zsh)"
 eval "$(starship init zsh)"

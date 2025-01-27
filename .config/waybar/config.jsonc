@@ -44,7 +44,7 @@
     "format-on": "ON ",
     "format-off": "OF ",
 
-    "on-click": "blueman-manager",
+    "on-click": "kitty bluetui",
   },
   "wireplumber": {
     "format": "{volume}% {icon}",
