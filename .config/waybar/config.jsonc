@@ -1,12 +1,17 @@
 {
   "margin-top": 6,
-  "margin-left": 12,
-  "margin-right": 12,
+  "margin-left": 16,
+  "margin-right": 16,
   "margin-bottom": -12,
   "height": 32,
-  "modules-left": ["hyprland/window"],
+  "modules-left": ["tray", "hyprland/window"],
   "modules-center": ["hyprland/workspaces"],
-  "modules-right": ["wireplumber", "bluetooth", "network", "clock"],
+  "modules-right": ["cava", "wireplumber", "bluetooth", "network", "clock"],
+  "cava": {},
+  "tray": {
+    "icon-size": 18,
+    "spacing": 5,
+  },
   "hyprland/window": {
     "format": "{}",
     "max-length": 35,
@@ -18,12 +23,9 @@
   "hyprland/workspaces": {
     "format": "{icon}",
     "on-click": "activate",
-    "format-icons": {
-      "active": " ",
-    },
     "sort-by-number": true,
     "persistent-workspaces": {
-      "*": 4, // 5 workspaces by default on every monitor
+      "*": 4, // 4 workspaces by default on every monitor
     },
   },
   "clock": {
