@@ -42,10 +42,13 @@ zstyle ":completion:*" menu no
 zstyle ":fzf-tab:complete:cd:*" fzf-preview "ls --color $realpath"
 zstyle ":fzf-tab:complete:__zoxide_z:*" fzf-preview "ls --color $realpath"
 
-export PATH="$PATH:$HOME/bin/platform-tools/:$HOME/.cargo/bin/:$HOME/.millennium/ext/bin:${HOME}/.local/bin"
+export PATH="$PATH:$HOME/.cargo/bin/:$HOME/.millennium/ext/bin:${HOME}/.local/bin"
 
 export EDITOR="nvim"
 export MANPAGER="nvim +Man!"
+export JAVA_HOME="/usr/lib/jvm/default"
+#export ANDROID_HOME="$HOME/Android/Sdk"
+#export ANDROID_NDK_HOME="/opt/android-sdk/ndk"
 
 alias ls="ls --color"
 alias grep="grep --color"

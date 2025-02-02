@@ -4,13 +4,14 @@
   "margin-right": 16,
   "margin-bottom": -12,
   "height": 32,
-  "modules-left": ["tray", "hyprland/window"],
+  "modules-left": ["hyprland/window", "tray"],
   "modules-center": ["hyprland/workspaces"],
   "modules-right": ["cava", "wireplumber", "bluetooth", "network", "clock"],
   "cava": {},
   "tray": {
     "icon-size": 18,
     "spacing": 5,
+    "show-passive-items": true,
   },
   "hyprland/window": {
     "format": "{}",
