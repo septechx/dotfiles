@@ -7,7 +7,13 @@
   "modules-left": ["hyprland/window", "tray"],
   "modules-center": ["hyprland/workspaces"],
   "modules-right": ["cava", "wireplumber", "bluetooth", "network", "clock"],
-  "cava": {},
+  "cava": {
+    "cava_config": "/home/sep/.config/cava/cava.conf",
+    "method": "pipewire",
+    "input_delay": 0,
+    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+    "bar_delimiter": 0,
+  },
   "tray": {
     "icon-size": 18,
     "spacing": 5,

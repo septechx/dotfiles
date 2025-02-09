@@ -42,13 +42,14 @@ zstyle ":completion:*" menu no
 zstyle ":fzf-tab:complete:cd:*" fzf-preview "ls --color $realpath"
 zstyle ":fzf-tab:complete:__zoxide_z:*" fzf-preview "ls --color $realpath"
 
-export PATH="$PATH:$HOME/.cargo/bin/:$HOME/.millennium/ext/bin:${HOME}/.local/bin"
+export PATH="$PATH:$HOME/.cargo/bin/:$HOME/.millennium/ext/bin:${HOME}/.local/bin:${HOME}/projects/lush/bazel-bin/modules/cli"
 
 export EDITOR="nvim"
 export MANPAGER="nvim +Man!"
-export JAVA_HOME="/usr/lib/jvm/default"
-#export ANDROID_HOME="$HOME/Android/Sdk"
-#export ANDROID_NDK_HOME="/opt/android-sdk/ndk"
+export JAVA_HOME="/usr/lib/jvm/java-21-openjdk"
+export LLDB_USE_NATIVE_PDB_READER="yes"
+export ANDROID_HOME="/opt/android-sdk"
+export ANDROID_NDK_HOME="/opt/android-sdk/ndk"
 
 alias ls="ls --color"
 alias grep="grep --color"
@@ -76,9 +77,19 @@ export ZVM_INSTALL="$HOME/.zvm/self"
 export PATH="$PATH:$HOME/.zvm/bin"
 export PATH="$PATH:$ZVM_INSTALL/"
 
+# proto
+export PROTO_HOME="$HOME/.proto";
+export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH";
+
 figlet "Nah siesque rili" | lolcat
 
 eval "$(fzf --zsh)"
 eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
+# bun completions
+[ -s "/home/sep/.bun/_bun" ] && source "/home/sep/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
