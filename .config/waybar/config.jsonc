@@ -31,9 +31,6 @@
     "format": "{icon}",
     "on-click": "activate",
     "sort-by-number": true,
-    "persistent-workspaces": {
-      "*": 4, // 4 workspaces by default on every monitor
-    },
   },
   "clock": {
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
