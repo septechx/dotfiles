@@ -1,13 +1,15 @@
-#!/bin/bash
+#!/bin/sh
 
 WALLPAPER_PATH="$(hyprctl hyprpaper listactive | awk 'NR==1 {print $3}')"
 
 cp "$WALLPAPER_PATH" ~/.current_wallpaper
 
-sudo cp "$WALLPAPER_PATH" /usr/share/sddm/themes/sugar-dark/background.png
-sudo chmod 644 /usr/share/sddm/themes/sugar-dark/background.png
-sudo chown root:sddm /usr/share/sddm/themes/sugar-dark/background.png
+NEW_PATH="/usr/share/backgrounds/background.png"
 
-echo "" > ~/.config/hypr/hyprpaper.conf
-echo "preload = $WALLPAPER_PATH" >> ~/.config/hypr/hyprpaper.conf
-echo "wallpaper = , $WALLPAPER_PATH" >> ~/.config/hypr/hyprpaper.conf
+sudo cp "$WALLPAPER_PATH" "$NEW_PATH"
+sudo chmod 644 "$NEW_PATH"
+sudo chown greeter "$NEW_PATH"
+
+echo "" >~/.config/hypr/hyprpaper.conf
+echo "preload = $WALLPAPER_PATH" >>~/.config/hypr/hyprpaper.conf
+echo "wallpaper = , $WALLPAPER_PATH" >>~/.config/hypr/hyprpaper.conf
