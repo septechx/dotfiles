@@ -82,8 +82,6 @@ export PATH="$PATH:$ZVM_INSTALL/"
 export PROTO_HOME="$HOME/.proto";
 export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH";
 
-figlet "Nah siesque rili" | lolcat
-
 eval "$(fzf --zsh)"
 eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
