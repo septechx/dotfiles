@@ -53,6 +53,8 @@ export ANDROID_NDK_HOME="/opt/android-sdk/ndk"
 
 alias ls="ls --color"
 alias grep="grep --color"
+alias bun="bun --bun"
+alias bunx="bunx --bun"
 alias cat="bat"
 alias htop="btop"
 alias vim="nvim"
@@ -82,13 +84,16 @@ export PATH="$PATH:$ZVM_INSTALL/"
 export PROTO_HOME="$HOME/.proto";
 export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH";
 
-eval "$(fzf --zsh)"
-eval "$(starship init zsh)"
-eval "$(zoxide init --cmd cd zsh)"
-
 # bun completions
 [ -s "/home/sep/.bun/_bun" ] && source "/home/sep/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+eval $(thefuck --alias)
+eval "$(fzf --zsh)"
+eval "$(starship init zsh)"
+eval "$(zoxide init --cmd cd zsh)"
+
+
