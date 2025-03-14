@@ -65,6 +65,7 @@ alias lg="lazygit"
 alias tls="tmux ls"
 alias ta="tmux attach"
 alias tn="tmux new -s"
+alias gp="git push"
 
 read -r ferium_github_key < "$HOME/dotfiles/secrets.txt"
 alias ferium="ferium --github-token $ferium_github_key"
