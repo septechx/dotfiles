@@ -68,8 +68,7 @@ alias tn="tmux new -s"
 alias gp="git push"
 alias ga="git add ."
 
-read -r ferium_github_key < "$HOME/dotfiles/secrets.txt"
-alias ferium="ferium --github-token $ferium_github_key --config ./ferium.json"
+alias ferium='ferium --github-token "$(pass ferium/github-token)" --config ./ferium.json'
 
 source /usr/share/nvm/init-nvm.sh
 
