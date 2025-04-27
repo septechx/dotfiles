@@ -50,6 +50,7 @@ export JAVA_HOME="/usr/lib/jvm/java-21-openjdk"
 export LLDB_USE_NATIVE_PDB_READER="yes"
 export ANDROID_HOME="/opt/android-sdk"
 export ANDROID_NDK_HOME="/opt/android-sdk/ndk"
+export NODE_COMPLILE_PATH=~/.cache/nodejs-compile-cache
 
 alias ls="ls --color"
 alias grep="grep --color"
