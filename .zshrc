@@ -52,6 +52,9 @@ export ANDROID_HOME="/opt/android-sdk"
 export ANDROID_NDK_HOME="/opt/android-sdk/ndk"
 export NODE_COMPLILE_PATH=~/.cache/nodejs-compile-cache
 
+# Make ssh work
+export TERM=xterm
+
 alias ls="ls --color"
 alias grep="grep --color"
 alias bun="bun --bun"
