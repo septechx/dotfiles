@@ -42,7 +42,7 @@ zstyle ":completion:*" menu no
 zstyle ":fzf-tab:complete:cd:*" fzf-preview "ls --color $realpath"
 zstyle ":fzf-tab:complete:__zoxide_z:*" fzf-preview "ls --color $realpath"
 
-export PATH="$PATH:$HOME/.cargo/bin/:$HOME/.millennium/ext/bin:${HOME}/.local/bin"
+export PATH="$PATH:$HOME/.cargo/bin/:$HOME/.millennium/ext/bin:${HOME}/.local/bin:$ANDROID_HOME/platform-tools"
 
 export EDITOR="nvim"
 export MANPAGER="nvim +Man!"
