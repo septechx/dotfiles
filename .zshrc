@@ -72,8 +72,8 @@ alias tn="tmux new -s"
 alias gp="git push"
 alias ga="git add ."
 alias gy="git yolo"
-
-alias ferium='ferium --github-token "$(pass ferium/github-token)" --config ./ferium.json'
+alias gc="git commit -m"
+alias fe="ferrite"
 
 source /usr/share/nvm/init-nvm.sh
 
