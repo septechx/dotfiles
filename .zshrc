@@ -55,17 +55,18 @@ export NODE_COMPLILE_PATH=~/.cache/nodejs-compile-cache
 # Make ssh work
 export TERM=xterm
 
-alias ls="ls --color"
-alias grep="grep --color"
+alias ls="exa"
+alias grep="rg"
+alias dig="dog"
 alias bun="bun --bun"
 alias bunx="bunx --bun"
 alias cat="bat"
-alias htop="btop"
+#alias htop="btop"
 alias vim="nvim"
 alias open="xdg-open"
 alias rm="trash"
 alias cp="cpg"
-alias mv="mvg"
+alias mv="mvg -g"
 alias c="clear"
 alias lg="lazygit"
 alias tls="tmux ls"
