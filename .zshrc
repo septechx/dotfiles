@@ -56,7 +56,7 @@ export NODE_COMPLILE_PATH=~/.cache/nodejs-compile-cache
 export TERM=xterm
 
 alias ls="exa"
-alias grep="rg"
+alias grep="grep --color"
 alias dig="dog"
 alias bun="bun --bun"
 alias bunx="bunx --bun"
