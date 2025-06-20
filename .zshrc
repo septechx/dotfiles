@@ -55,7 +55,9 @@ export NODE_COMPLILE_PATH=~/.cache/nodejs-compile-cache
 # Make ssh work
 export TERM=xterm
 
-alias ls="exa"
+alias ls="ls --color"
+alias la="ls --color -lAh"
+alias ll="ls --color -Fls"
 alias grep="grep --color"
 alias dig="dog"
 alias bun="bun --bun"
@@ -63,9 +65,12 @@ alias bunx="bunx --bun"
 alias cat="bat"
 alias vim="nvim"
 alias open="xdg-open"
-alias rm="trash"
-alias cp="cpg"
-alias mv="mvg -g"
+alias rm="trash -v"
+alias ps="ps auxf"
+alias mkdir="mkdir -p"
+alias rmm="rm -rf"
+alias cp="cpg -g -i"
+alias mv="mvg -g -i"
 alias c="clear"
 alias lg="lazygit"
 alias tls="tmux ls"
@@ -100,7 +105,18 @@ export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH";
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-eval $(thefuck --alias)
+function cdi-widget() {
+  zle -I
+  zle push-input
+  BUFFER="cdi"
+  zle accept-line
+}
+
+zle -N cdi-widget
+bindkey '^F' cdi-widget
+
+
+eval "$(thefuck --alias)"
 eval "$(fzf --zsh)"
 eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
