@@ -42,7 +42,7 @@ zstyle ":completion:*" menu no
 zstyle ":fzf-tab:complete:cd:*" fzf-preview "ls --color $realpath"
 zstyle ":fzf-tab:complete:__zoxide_z:*" fzf-preview "ls --color $realpath"
 
-export PATH="$PATH:$HOME/.cargo/bin/:$HOME/.millennium/ext/bin:${HOME}/.local/bin:$ANDROID_HOME/platform-tools"
+export PATH="$PATH:$HOME/.cargo/bin/:$HOME/.local/bin:$ANDROID_HOME/platform-tools"
 
 export EDITOR="nvim"
 export MANPAGER="nvim +Man!"
@@ -51,6 +51,8 @@ export LLDB_USE_NATIVE_PDB_READER="yes"
 export ANDROID_HOME="/opt/android-sdk"
 export ANDROID_NDK_HOME="/opt/android-sdk/ndk"
 export NODE_COMPLILE_PATH=~/.cache/nodejs-compile-cache
+
+source "./.zshvars.sh"
 
 # Make ssh work
 export TERM=xterm
@@ -81,6 +83,7 @@ alias ga="git add ."
 alias gy="git yolo"
 alias gc="git commit -m"
 alias fe="ferrite"
+alias notes="nvim $NOTES_DIR"
 
 source /usr/share/nvm/init-nvm.sh
 
