@@ -52,7 +52,7 @@ export ANDROID_HOME="/opt/android-sdk"
 export ANDROID_NDK_HOME="/opt/android-sdk/ndk"
 export NODE_COMPLILE_PATH=~/.cache/nodejs-compile-cache
 
-source "./.zshvars.sh"
+source "$HOME/.zshvars.sh"
 
 # Make ssh work
 export TERM=xterm
@@ -83,7 +83,7 @@ alias ga="git add ."
 alias gy="git yolo"
 alias gc="git commit -m"
 alias fe="ferrite"
-alias notes="nvim $NOTES_DIR"
+alias notes="cd $NOTES_DIR && nvim $NOTES_DIR"
 
 source /usr/share/nvm/init-nvm.sh
 
