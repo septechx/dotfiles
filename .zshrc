@@ -83,7 +83,7 @@ alias ga="git add ."
 alias gy="git yolo"
 alias gc="git commit -m"
 alias fe="ferrite"
-alias notes="cd $NOTES_DIR && nvim $NOTES_DIR"
+alias notes="cd '$NOTES_DIR' && nvim '$NOTES_DIR'"
 
 source /usr/share/nvm/init-nvm.sh
 
