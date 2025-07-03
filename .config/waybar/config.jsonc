@@ -1,5 +1,5 @@
 {
-  "margin-top": 6,
+  "margin-top": 4,
   "margin-left": 16,
   "margin-right": 16,
   "margin-bottom": -12,
@@ -22,7 +22,7 @@
   },
   "tray": {
     "icon-size": 18,
-    "spacing": 5,
+    "spacing": 4,
     "show-passive-items": true,
   },
   "hyprland/window": {
@@ -39,9 +39,8 @@
     "sort-by-number": true,
   },
   "clock": {
-    "format": "{:%d/%m - %H:%M}",
+    "format": "{:%H:%M - %d/%m/%y}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "{:%Y-%m-%d}",
   },
   //"network": {
   //  "format-wifi": "  {signalStrength}%",
@@ -52,26 +51,26 @@
   //  "format-alt": "{ifname}: {ipaddr}/{cidr}",
   //},
   "bluetooth": {
-    "format-connected": "CO ",
-    "format-connected-battery": "{device_battery_percentage} ",
-    "format-on": "ON ",
-    "format-off": "OF ",
+    "format-connected": " CO",
+    "format-connected-battery": " {device_battery_percentage}",
+    "format-on": " ON",
+    "format-off": " OF",
 
     "on-click": "kitty bluetui",
   },
   "wireplumber": {
-    "format": "{volume}% {icon}",
-    "format-bluetooth": "{volume}% {icon}  {format_source}",
-    "format-bluetooth-muted": " {icon}  {format_source}",
+    "format": "{icon} {volume}%",
+    //"format-bluetooth": "{volume}% {icon}  {format_source}",
+    //"format-bluetooth-muted": " {icon}  {format_source}",
     "format-muted": "",
     "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
-      "car": "",
-      "default": ["", "", ""],
+      //"headphone": "",
+      //"hands-free": "",
+      //"headset": "",
+      //"phone": "",
+      //"portable": "",
+      //"car": "",
+      "default": ["", ""],
     },
     "on-click": "kitty pulsemixer",
   },
