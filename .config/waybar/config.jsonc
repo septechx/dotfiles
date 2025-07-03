@@ -6,7 +6,13 @@
   "height": 32,
   "modules-left": ["hyprland/window", "tray"],
   "modules-center": ["hyprland/workspaces"],
-  "modules-right": ["cava", "wireplumber", "bluetooth", "network", "clock"],
+  "modules-right": [
+    "cava",
+    "wireplumber",
+    "bluetooth",
+    //"network",
+    "clock",
+  ],
   "cava": {
     "cava_config": "/home/sep/.config/cava/cava.conf",
     "method": "pipewire",
@@ -33,17 +39,18 @@
     "sort-by-number": true,
   },
   "clock": {
+    "format": "{:%d/%m - %H:%M}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format-alt": "{:%Y-%m-%d}",
   },
-  "network": {
-    "format-wifi": "  {signalStrength}%",
-    "format-ethernet": "{cidr} ",
-    "tooltip-format": "{ifname} via {gwaddr} ",
-    "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": " ⚠ ",
-    "format-alt": "{ifname}: {ipaddr}/{cidr}",
-  },
+  //"network": {
+  //  "format-wifi": "  {signalStrength}%",
+  //  "format-ethernet": "{cidr} ",
+  //  "tooltip-format": "{ifname} via {gwaddr} ",
+  //  "format-linked": "{ifname} (No IP) ",
+  //  "format-disconnected": " ⚠ ",
+  //  "format-alt": "{ifname}: {ipaddr}/{cidr}",
+  //},
   "bluetooth": {
     "format-connected": "CO ",
     "format-connected-battery": "{device_battery_percentage} ",
