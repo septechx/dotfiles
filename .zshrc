@@ -85,6 +85,8 @@ alias gc="git commit -m"
 alias fe="ferrite"
 alias notes="cd '$NOTES_DIR' && nvim '$NOTES_DIR'"
 
+[[ "$TERM_PROGRAM" == "vscode" ]] && unset ARGV0
+
 source /usr/share/nvm/init-nvm.sh
 
 export PNPM_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/pnpm"
