@@ -60,6 +60,7 @@ export TERM=xterm
 alias ls="ls --color"
 alias la="ls --color -lAh"
 alias ll="ls --color -Fls"
+
 alias grep="grep --color"
 alias dig="dog"
 alias bun="bun --bun"
@@ -75,15 +76,29 @@ alias cp="cpg -g -i"
 alias mv="mvg -g -i"
 alias c="clear"
 alias lg="lazygit"
+alias fe="ferrite"
+
+alias notes="cd '$NOTES_DIR' && nvim '$NOTES_DIR'"
+
 alias tls="tmux ls"
 alias ta="tmux attach"
 alias tn="tmux new -s"
+
+alias gs="git status --short"
+alias gd="git diff --output-indicator-new=' ' --output-indicator-old=' '"
+alias ga="git add"
+alias gc="git commit"
 alias gp="git push"
-alias ga="git add ."
+alias gu="git pull"
+alias gb="git branch"
+alias gi="git init"
 alias gy="git yolo"
-alias gc="git commit -m"
-alias fe="ferrite"
-alias notes="cd '$NOTES_DIR' && nvim '$NOTES_DIR'"
+alias gcl="git clone"
+alias gap="git add --patch"
+alias gl='git log --all --graph --pretty=format:"%C(magenta)%h %C(white) %an %ar%C(auto) %D%n%s%n"'
+alias gn="git checkout -b"
+
+gcm() { git commit --message "$*" }
 
 [[ "$TERM_PROGRAM" == "vscode" ]] && unset ARGV0
 
