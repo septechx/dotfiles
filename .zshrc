@@ -57,6 +57,9 @@ source "$HOME/.zshvars.sh"
 # Make ssh work
 export TERM=xterm
 
+alias tup="sudo tailscale up --accept-routes"
+alias tdn="sudo tailscale down"
+
 alias ls="ls --color"
 alias la="ls --color -lAh"
 alias ll="ls --color -Fls"
