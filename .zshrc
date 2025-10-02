@@ -61,8 +61,15 @@ alias tup="sudo tailscale up --accept-routes"
 alias tdn="sudo tailscale down"
 
 alias ls="ls --color"
-alias la="ls --color -lAh"
-alias ll="ls --color -Fls"
+# -F = show file type
+# -C = columns format
+# -l = long format
+# -h = human readable
+# -s = print file size
+# -A = show hidden files
+alias ll="ls --color -FCA"
+#alias la="ls --color -FlAhs"
+alias la="eza --color -lA"
 
 alias grep="grep --color"
 alias dig="dog"
