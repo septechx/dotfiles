@@ -81,7 +81,7 @@ alias open="xdg-open"
 alias rm="trash -v"
 alias ps="ps auxf"
 alias mkdir="mkdir -p"
-alias rmm="rm -rf"
+alias rmm="/bin/rm -rf"
 alias cp="cpg -g -i"
 alias mv="mvg -g -i"
 alias c="clear"
@@ -129,7 +129,7 @@ export PROTO_HOME="$HOME/.proto";
 export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH";
 
 # bun completions
-[ -s "/home/sep/.bun/_bun" ] && source "/home/sep/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # bun
 export BUN_INSTALL="$HOME/.bun"
@@ -145,10 +145,7 @@ function cdi-widget() {
 zle -N cdi-widget
 bindkey '^F' cdi-widget
 
-
 eval "$(thefuck --alias)"
 eval "$(fzf --zsh)"
 eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
-
-
