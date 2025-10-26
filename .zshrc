@@ -94,6 +94,9 @@ alias tls="tmux ls"
 alias ta="tmux attach"
 alias tn="tmux new -s"
 
+alias 7x="7z x"
+alias 7l="7z l"
+
 alias gs="git status --short"
 alias gd="git diff --output-indicator-new=' ' --output-indicator-old=' '"
 alias ga="git add"
