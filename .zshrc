@@ -42,9 +42,10 @@ zstyle ":completion:*" menu no
 zstyle ":fzf-tab:complete:cd:*" fzf-preview "ls --color $realpath"
 zstyle ":fzf-tab:complete:__zoxide_z:*" fzf-preview "ls --color $realpath"
 
-export PATH="$PATH:$HOME/.cargo/bin/:$HOME/.local/bin:$ANDROID_HOME/platform-tools:$HOME/.dotnet/tools"
+export PATH="$PATH:$HOME/.cargo/bin/:$HOME/.local/bin:$ANDROID_HOME/platform-tools:$HOME/.dotnet/tools:$HOME/go/bin"
 
 export EDITOR="nvim"
+export PAGER="less"
 export MANPAGER="nvim +Man!"
 export JAVA_HOME="/usr/lib/jvm/java-21-openjdk"
 export LLDB_USE_NATIVE_PDB_READER="yes"
@@ -72,6 +73,7 @@ alias ll="ls --color -FCA"
 alias la="eza --color -lA"
 
 alias grep="grep --color"
+alias sudo="sudo-rs"
 alias dig="dog"
 alias bun="bun --bun"
 alias bunx="bunx --bun"
