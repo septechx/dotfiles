@@ -89,6 +89,7 @@ alias mv="mvg -g -i"
 alias c="clear"
 alias lg="lazygit"
 alias fe="ferrite"
+alias pw="packwiz"
 
 alias notes="cd '$NOTES_DIR' && nvim '$NOTES_DIR'"
 
