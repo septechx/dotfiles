@@ -113,6 +113,7 @@ alias gcl="git clone"
 alias gap="git add --patch"
 alias gl='git log --all --graph --pretty=format:"%C(magenta)%h %C(white) %an %ar%C(auto) %D%n%s%n"'
 alias gn="git checkout -b"
+alias gst="git stash push -um"
 
 gcm() { git commit --message "$*" }
 
