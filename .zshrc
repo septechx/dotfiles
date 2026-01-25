@@ -113,7 +113,9 @@ alias gcl="git clone"
 alias gap="git add --patch"
 alias gl='git log --all --graph --pretty=format:"%C(magenta)%h %C(white) %an %ar%C(auto) %D%n%s%n"'
 alias gn="git checkout -b"
+alias gch="git checkout"
 alias gst="git stash push -um"
+alias gfm="git fetch && git merge"
 
 gcm() { git commit --message "$*" }
 
@@ -152,19 +154,19 @@ function cdi-widget() {
 zle -N cdi-widget
 bindkey '^F' cdi-widget
 
-# history-widget() {
-#   zle -I
-#   zle push-input
-#   BUFFER=$(fc -rl 1 | sed 's/^[[:space:]]*[0-9]\+[[:space:]]*//' | fzf --height=40%)
-#   if [[ -n $BUFFER ]]; then
-#     zle accept-line
-#   else
-#     zle redisplay
-#   fi
-# }
-#
-# zle -N history-widget
-# bindkey '^H' history-widget
+history-widget() {
+  zle -I
+  zle push-input
+  BUFFER=$(fc -rl 1 | sed 's/^[[:space:]]*[0-9]\+[[:space:]]*//' | fzf --height=40%)
+  if [[ -n $BUFFER ]]; then
+    zle accept-line
+  else
+    zle redisplay
+  fi
+}
+
+zle -N history-widget
+bindkey '^H' history-widget
 
 eval "$(thefuck --alias)"
 eval "$(fzf --zsh)"
