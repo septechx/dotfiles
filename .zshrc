@@ -1,3 +1,6 @@
+# Uncomment to profile
+# zmodload zsh/zprof
+
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
 if [ ! -d "$ZINIT_HOME" ]; then
@@ -121,8 +124,6 @@ gcm() { git commit --message "$*" }
 
 [[ "$TERM_PROGRAM" == "vscode" ]] && unset ARGV0
 
-source /usr/share/nvm/init-nvm.sh
-
 export PNPM_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/pnpm"
 case ":$PATH:" in
     *":$PNPM_HOME:"*) ;;
@@ -143,6 +144,13 @@ export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH";
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# fnm
+FNM_PATH="$HOME/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
+fi
 
 function cdi-widget() {
   zle -I
@@ -172,3 +180,6 @@ eval "$(thefuck --alias)"
 eval "$(fzf --zsh)"
 eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+
+# Uncomment to profile
+# zprof
