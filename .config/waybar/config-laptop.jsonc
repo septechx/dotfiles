@@ -1,0 +1,81 @@
+{
+  "margin-top": 4,
+  "margin-left": 16,
+  "margin-right": 16,
+  "margin-bottom": -12,
+  "height": 32,
+  "modules-left": ["hyprland/window", "tray"],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": [
+    "cava",
+    "wireplumber",
+    "bluetooth",
+    "network",
+    "battery",
+    "clock"
+  ],
+  "cava": {
+    "cava_config": "/home/sep/.config/cava/cava.conf",
+    "method": "pipewire",
+    "input_delay": 0,
+    "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+    "bar_delimiter": 0
+  },
+  "tray": {
+    "icon-size": 18,
+    "spacing": 4,
+    "show-passive-items": true
+  },
+  "hyprland/window": {
+    "format": "{}",
+    "max-length": 35,
+    "rewrite": {
+      "": "Hyprland"
+    },
+    "separate-outputs": true
+  },
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "sort-by-number": true
+  },
+  "clock": {
+    "format": "{:%H:%M - %d/%m/%y}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+  "bluetooth": {
+    "format-connected": " CO",
+    "format-connected-battery": " {device_battery_percentage}%",
+    "format-on": " ON",
+    "format-off": " OF",
+    "on-click": "kitty bluetui"
+  },
+  "wireplumber": {
+    "format": "{icon} {volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "default": ["", ""]
+    },
+    "on-click": "kitty pulsemixer"
+  },
+  "network": {
+    "format-wifi": "\uf1ab  {signalStrength}%",
+    "format-ethernet": "\U000f0200 {cidr}",
+    "tooltip-format": "{ifname} via {gwaddr}",
+    "format-linked": "{ifname} (No IP)",
+    "format-disconnected": "\u26a0 Disconnected",
+    "format-alt": "{ifname}: {ipaddr}/{cidr}",
+    "on-click": "kitty nmtui"
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    "format-charging": "󰂄 {capacity}%",
+    "format-plugged": "󰚥 {capacity}%",
+    "tooltip-format": "{timeTo} {power}W"
+  }
+}

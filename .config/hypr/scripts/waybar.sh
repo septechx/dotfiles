@@ -1,4 +1,3 @@
-#! /bin/bash
+#!/bin/bash
 
-killall waybar
-waybar
+exec ~/.config/waybar/scripts/launch.sh

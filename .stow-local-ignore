@@ -2,5 +2,9 @@
 \.gitignore
 \.gitmodules
 
-scripts
+^/scripts$
+
+/setup-.*\.sh$
+/install-.*\.sh$
+
 secrets\.txt
