@@ -77,6 +77,7 @@ alias la="eza --color -lA"
 
 alias grep="grep --color"
 alias sudo="sudo-rs"
+alias sudo="sudo "
 alias dig="dog"
 alias bun="bun --bun"
 alias bunx="bunx --bun"
