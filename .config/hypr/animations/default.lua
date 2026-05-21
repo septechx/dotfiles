@@ -109,6 +109,5 @@ hl.animation({
 hl.config({
 	animations = {
 		enabled = "yes, please :)",
-		-- Default animations
 	},
 })
