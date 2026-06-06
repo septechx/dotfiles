@@ -125,5 +125,5 @@ hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = tru
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
 
 -- Discord pass-through
-hl.bind("F8", hl.dsp.pass("class:^(discord)$"))
-hl.bind("F7", hl.dsp.pass("class:^(discord)$"))
+hl.bind("F8", hl.dsp.pass({ window = "class:^(discord)$" }))
+hl.bind("F7", hl.dsp.pass({ window = "class:^(discord)$" }))
