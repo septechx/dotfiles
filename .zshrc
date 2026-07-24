@@ -61,8 +61,8 @@ source "$HOME/.zshvars.sh"
 # Make ssh work
 export TERM=xterm
 
-alias tup="sudo tailscale up --accept-routes"
-alias tdn="sudo tailscale down"
+alias tup="tailscale up --accept-routes"
+alias tdn="tailscale down"
 
 alias ls="ls --color"
 # -F = show file type
@@ -90,7 +90,7 @@ alias mkdir="mkdir -p"
 alias rmm="/bin/rm -rf"
 alias cp="cpg -g -i"
 alias mv="mvg -g -i"
-alias c="clear"
+alias c="clear -x"
 alias lg="lazygit"
 alias fe="ferrite"
 alias pw="packwiz"
