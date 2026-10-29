@@ -1,3 +1,5 @@
+local host = require("config.host")
+
 local mainMod = "SUPER"
 
 local terminal = "kitty"
@@ -5,7 +7,7 @@ local fileManager = "dolphin"
 local menu = "rofi -show drun"
 local waylock =
 	'wlogout -b "6" -c -r 0 -m 0 --layout "/home/sep/.config/wlogout/layout_1" --css "/home/sep/.config/wlogout/style_1.css" --protocol layer-shell'
-local browser = "zen-browser"
+local browser = host.is_laptop and "flatpak run app.zen_browser.zen" or "zen-browser"
 local obsidian =
 	"env OBSIDIAN_USE_WAYLAND=1 obsidian --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland"
 local feishin = "feishin --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform-hint=auto"

@@ -1,3 +1,5 @@
+local host = require("config.host")
+
 hl.config({
 	cursor = {
 		no_hardware_cursors = true,
@@ -9,6 +11,6 @@ hl.config({
 		kb_options = "caps:escape",
 		kb_rules = "",
 		follow_mouse = 1,
-		sensitivity = -1,
+		sensitivity = host.is_laptop and 0 or -1,
 	},
 })

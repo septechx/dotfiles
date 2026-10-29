@@ -49,6 +49,6 @@
     "format-icons": {
       "default": ["", ""],
     },
-    "on-click": "kitty pulsemixer",
+    "on-click": "~/.config/waybar/scripts/audio.sh",
   },
 }

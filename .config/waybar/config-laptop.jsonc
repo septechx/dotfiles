@@ -56,15 +56,15 @@
     "format-icons": {
       "default": ["", ""]
     },
-    "on-click": "kitty pulsemixer"
+    "on-click": "~/.config/waybar/scripts/audio.sh"
   },
   "network": {
-    "format-wifi": "\uf1ab  {signalStrength}%",
-    "format-ethernet": "\U000f0200 {cidr}",
+    "format-wifi": "\uf1eb  {signalStrength}%",
+    "format-ethernet": "󰈀 {cidr}",
     "tooltip-format": "{ifname} via {gwaddr}",
+    "tooltip-format-wifi": "{essid}\nSignal strength: {signalStrength}%\n{ifname} via {gwaddr}\nIP: {ipaddr}/{cidr}",
     "format-linked": "{ifname} (No IP)",
     "format-disconnected": "\u26a0 Disconnected",
-    "format-alt": "{ifname}: {ipaddr}/{cidr}",
     "on-click": "kitty nmtui"
   },
   "battery": {

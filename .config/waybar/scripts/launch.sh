@@ -1,17 +1,12 @@
 #!/bin/bash
 
-HOSTNAME=$(hostname)
+PROFILE=$("$HOME/.config/hypr/scripts/host-profile.sh")
 
-case "$HOSTNAME" in
-arch)
-    CONFIG="config-desktop.jsonc"
-    ;;
-nixos)
+case "$PROFILE" in
+laptop)
     CONFIG="config-laptop.jsonc"
     ;;
 *)
-    # Default to desktop config for unknown hosts
-    echo "Unknown hostname: $HOSTNAME, using desktop config"
     CONFIG="config-desktop.jsonc"
     ;;
 esac
