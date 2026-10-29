@@ -27,6 +27,44 @@ bindkey "^y" autosuggest-accept
 bindkey "^p" history-search-backward
 bindkey "^n" history-search-forward
 
+# Vi mode (vim-like navigation)
+bindkey -v
+export KEYTIMEOUT=1
+
+# jk / kj to escape to normal mode
+bindkey -M viins 'jk' vi-cmd-mode
+bindkey -M viins 'kj' vi-cmd-mode
+
+# Keep existing custom bindings available in vi insert mode
+bindkey -M viins "^y" autosuggest-accept
+bindkey -M viins "^p" history-search-backward
+bindkey -M viins "^n" history-search-forward
+
+# h/j/k/l navigation in completion menu
+zmodload -i zsh/complist
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+
+# Editable command line in $EDITOR with v in normal mode
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd 'v' edit-command-line
+
+# Change cursor shape for different vi modes
+function zle-keymap-select {
+  case $KEYMAP in
+    vicmd) echo -ne '\e[1 q' ;;      # block
+    viins|main) echo -ne '\e[5 q' ;; # beam
+  esac
+}
+zle -N zle-keymap-select
+function zle-line-init {
+  echo -ne '\e[5 q' # beam on new prompt
+}
+zle -N zle-line-init
+
 HISTSIZE=5000
 HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
@@ -135,6 +173,8 @@ export ZVM_INSTALL="$HOME/.zvm/self"
 export PATH="$PATH:$HOME/.zvm/bin"
 export PATH="$PATH:$ZVM_INSTALL/"
 
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
 # proto
 export PROTO_HOME="$HOME/.proto";
 export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH";
@@ -161,7 +201,8 @@ function cdi-widget() {
 }
 
 zle -N cdi-widget
-bindkey '^F' cdi-widget
+bindkey -M viins '^F' cdi-widget
+bindkey -M vicmd '^F' cdi-widget
 
 history-widget() {
   zle -I
@@ -175,7 +216,8 @@ history-widget() {
 }
 
 zle -N history-widget
-bindkey '^H' history-widget
+bindkey -M viins '^H' history-widget
+bindkey -M vicmd '^H' history-widget
 
 eval "$(thefuck --alias)"
 eval "$(fzf --zsh)"
@@ -184,3 +226,7 @@ eval "$(zoxide init --cmd cd zsh)"
 
 # Uncomment to profile
 # zprof
+
+# terminal-wakatime setup
+export PATH="$HOME/.wakatime:$PATH"
+eval "$(terminal-wakatime init)"
